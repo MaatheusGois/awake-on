@@ -13,6 +13,10 @@
 		82871067273A0A9E00188D72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82871055273A0A9900188D72 /* ContentView.swift */; };
 		82871068273A0A9E00188D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82871056273A0A9E00188D72 /* Assets.xcassets */; };
 		82871069273A0A9E00188D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82871056273A0A9E00188D72 /* Assets.xcassets */; };
+		82871077273A0B9400188D72 /* LanScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 82871076273A0B9400188D72 /* LanScanner */; };
+		82871079273A0BB400188D72 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82871078273A0BB400188D72 /* ContentViewModel.swift */; };
+		8287107A273A0BB400188D72 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82871078273A0BB400188D72 /* ContentViewModel.swift */; };
+		82871080273A161700188D72 /* Awake in Frameworks */ = {isa = PBXBuildFile; productRef = 8287107F273A161700188D72 /* Awake */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,7 @@
 		8287105B273A0A9E00188D72 /* awake-on.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "awake-on.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82871061273A0A9E00188D72 /* awake-on.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "awake-on.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82871063273A0A9E00188D72 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		82871078273A0BB400188D72 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82871080273A161700188D72 /* Awake in Frameworks */,
+				82871077273A0B9400188D72 /* LanScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				82871054273A0A9900188D72 /* awake_onApp.swift */,
+				82871078273A0BB400188D72 /* ContentViewModel.swift */,
 				82871055273A0A9900188D72 /* ContentView.swift */,
 				82871056273A0A9E00188D72 /* Assets.xcassets */,
 			);
@@ -94,6 +102,10 @@
 			dependencies = (
 			);
 			name = "awake-on (iOS)";
+			packageProductDependencies = (
+				82871076273A0B9400188D72 /* LanScanner */,
+				8287107F273A161700188D72 /* Awake */,
+			);
 			productName = "awake-on (iOS)";
 			productReference = 8287105B273A0A9E00188D72 /* awake-on.app */;
 			productType = "com.apple.product-type.application";
@@ -142,6 +154,10 @@
 				Base,
 			);
 			mainGroup = 8287104E273A0A9900188D72;
+			packageReferences = (
+				82871075273A0B9400188D72 /* XCRemoteSwiftPackageReference "lan-scanner" */,
+				8287107E273A161700188D72 /* XCRemoteSwiftPackageReference "Awake" */,
+			);
 			productRefGroup = 8287105C273A0A9E00188D72 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -178,6 +194,7 @@
 			files = (
 				82871066273A0A9E00188D72 /* ContentView.swift in Sources */,
 				82871064273A0A9E00188D72 /* awake_onApp.swift in Sources */,
+				82871079273A0BB400188D72 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +204,7 @@
 			files = (
 				82871067273A0A9E00188D72 /* ContentView.swift in Sources */,
 				82871065273A0A9E00188D72 /* awake_onApp.swift in Sources */,
+				8287107A273A0BB400188D72 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +470,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		82871075273A0B9400188D72 /* XCRemoteSwiftPackageReference "lan-scanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MaatheusGois/lan-scanner";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		8287107E273A161700188D72 /* XCRemoteSwiftPackageReference "Awake" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MaatheusGois/Awake";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		82871076273A0B9400188D72 /* LanScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 82871075273A0B9400188D72 /* XCRemoteSwiftPackageReference "lan-scanner" */;
+			productName = LanScanner;
+		};
+		8287107F273A161700188D72 /* Awake */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8287107E273A161700188D72 /* XCRemoteSwiftPackageReference "Awake" */;
+			productName = Awake;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8287104F273A0A9900188D72 /* Project object */;
 }
